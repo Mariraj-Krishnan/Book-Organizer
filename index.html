@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="book.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="search-bar">
+      <p>
+        <label for="search" style="width:100%; text-align: center;">Search</label><br>
+        <input type="text" id="search" oninput="search(this)" placeholder="Search for a book or an author">
+      </p>
+    </div>
+    <div class="container">
+      <div class="table">
+        <div class="th">
+          <div>SI.no</div>
+          <div>Book Name</div>
+          <div>Author</div>
+          <div>Description</div>
+        </div>
+        <div class="trHolder">
+
+        </div>
+      </div>
+      <div class="entryForm">
+        <h3>Add a book</h3>
+        <p>
+          <label for="bName">Book name</label><br>
+          <input id="bName" type="text" placeholder="Enter the book name" class="book-inputs"/>
+        </p>
+        <p>
+          <label for="aName">Author name</label><br>
+          <input id="aName" type="text" placeholder="Enter the Author name" class="book-inputs"/>
+        </p>
+        <p>
+          <label for="description">Description</label><br>
+          <textarea
+            id="des"
+            cols="15"
+            rows="10"
+            placeholder="Enter the description"
+          ></textarea>
+        </p>
+        <button onclick="addBook()">Add</button>
+      </div>
+    </div>
+  </body>
+</html>
